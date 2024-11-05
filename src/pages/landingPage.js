@@ -15,7 +15,7 @@ const LandingPage = () => {
     <div>
       <Navbar />
       <header className="hero">
-        <h2>Welcome to ShopMate</h2>
+        <h2>Welcome to Laura's store</h2>
         <p>Your one-stop shop for everything!</p>
       </header>
       <section className="products">
