@@ -33,3 +33,9 @@ F
 src/App.test.js,9\2\923703ced91ac38943d37930d9d27a7ebe8f01ad
 I
 src/components/navbar.css,7\d\7dec4a498dec9700f82119274338c6065c905d7c
+I
+src/components/product.js,2\6\26447d0becb97d5e8f9a85244e684903b3dbd30e
+J
+src/components/product.css,9\6\968f4ed91a2c40e0338587b9cbee11950870da4d
+H
+src/pages/landingPage.js,3\a\3ae09373b6677dc1d692c3d5d998e2dc940cab99
