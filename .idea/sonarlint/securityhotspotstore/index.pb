@@ -41,3 +41,15 @@ H
 src/pages/landingPage.js,3\a\3ae09373b6677dc1d692c3d5d998e2dc940cab99
 I
 src/pages/landingPage.css,9\b\9b730e077a1cdea31a3fdf5c0b375d29cbd347b3
+I
+src/pages/LandingPage.css,2\b\2b9015a6c6e3a23bbbbab32d97d75ca7a1c021b8
+H
+src/pages/LandingPage.js,6\2\62114fbbe66fc9f2c3ad9a3a81ee5f436d160773
+I
+src/components/Navbar.css,a\a\aab8049bb68f501bf528987dcdec0afc0c4fc766
+H
+src/components/Navbar.js,2\d\2d4879a2b825dad8d007f4486bb3dca97c81dd6d
+J
+src/components/Product.css,d\8\d8a939bd512ed1c8b563c70ab2bb1b5aacd74017
+I
+src/components/Product.js,8\2\82799b287c6340b5cb1b1d21462ea99c91d616f9
