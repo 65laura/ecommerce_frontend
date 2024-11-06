@@ -20,7 +20,7 @@ const LandingPage = () => {
       </header>
       <section className="products">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <Product key={product.id} product={product} />
         ))}
       </section>
     </div>
