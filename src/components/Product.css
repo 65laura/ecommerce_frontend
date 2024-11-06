@@ -2,7 +2,7 @@
 .product-card {
   border: 1px solid #ddd;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .product-card img {
