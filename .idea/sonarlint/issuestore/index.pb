@@ -53,3 +53,5 @@ J
 src/components/Product.css,d\8\d8a939bd512ed1c8b563c70ab2bb1b5aacd74017
 I
 src/components/Product.js,8\2\82799b287c6340b5cb1b1d21462ea99c91d616f9
+A
+public/robots.txt,d\a\dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9

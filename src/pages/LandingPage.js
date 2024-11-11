@@ -1,14 +1,17 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Product from '../components/Product';
+import sneakers from '../assets/sneakers.jpg';
+import jacket from '../assets/jacket.jpg';
+import watch from '../assets/watch.jpg';
 import './LandingPage.css';
 
 const products = [
-  { id: 1, name: 'Sneakers', price: 59.99, image: '/assets/sneakers.jpg' },
-  { id: 2, name: 'Jacket', price: 89.99, image: '/assets/jacket.jpg' },
-  { id: 3, name: 'Watch', price: 120.00, image: '/assets/watch.jpg' },
+  { id: 1, name: 'Sneakers', price: 59.99, image: sneakers },
+  { id: 2, name: 'Jacket', price: 89.99, image: jacket },
+  { id: 3, name: 'Watch', price: 120.00, image: watch },
 ];
+
 
 const LandingPage = () => {
   return (
