@@ -5,7 +5,10 @@
   text-align: left;
 }
 
-.product-card img {
-  width: 100%;
-  height: auto;
+ .product img {
+   width: 120px;
+   height: 120px;
+   object-fit: cover;
+   border-radius: 8px;
+ }
 }
