@@ -1,8 +1,13 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 .hero {
+  background-color: #e6e6e6;
   text-align: center;
-  padding: 2rem;
-  background-color: #f4f4f4;
+  padding: 20px;
 }
 
 .products {
