@@ -1,14 +1,26 @@
-
-import React from 'react';
-import LandingPage from './pages/LandingPage';
-
-function App() {
-  return (
-    <div>
-      <LandingPage />
-    </div>
-  );
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
 }
 
-export default App;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
 

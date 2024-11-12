@@ -55,3 +55,7 @@ I
 src/components/Product.js,8\2\82799b287c6340b5cb1b1d21462ea99c91d616f9
 A
 public/robots.txt,d\a\dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
+H
+src/pages/ContactPage.js,8\1\81d09226e1a351870e6b95e6b6dd5b1593a2b7aa
+I
+src/pages/ContactPage.css,3\6\362e5178167053e6d24258ae3e7d1d585b244052
