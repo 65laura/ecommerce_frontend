@@ -11,12 +11,12 @@
   display: flex;
   align-items: center;
 }
-
 .navbar-logo-img {
-  height: 40px;
-  width: 40px;
-  margin-right: 10px; /* Space between logo and title */
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
 }
+
 
 .navbar-title {
   font-size: 24px;
