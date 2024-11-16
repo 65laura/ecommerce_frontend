@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/assets/logo.png" alt="ShopMate Logo" className="navbar-logo-img" />
+         <img src={logo} alt="ShopMate Logo" className="navbar-logo-img" />
         <Link to="/" className="navbar-title">ShopMate</Link>
       </div>
       <ul className="navbar-links">

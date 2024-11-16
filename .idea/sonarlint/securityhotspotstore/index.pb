@@ -59,3 +59,5 @@ H
 src/pages/ContactPage.js,8\1\81d09226e1a351870e6b95e6b6dd5b1593a2b7aa
 I
 src/pages/ContactPage.css,3\6\362e5178167053e6d24258ae3e7d1d585b244052
+A
+package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
