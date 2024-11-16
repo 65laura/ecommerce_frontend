@@ -6,7 +6,7 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
+    font-family: 'Nunito', Arial, sans-serif;
 }
 
 .contact-title {
@@ -59,15 +59,18 @@
 
 .submit-button {
   padding: 10px 15px;
-  background-color: #007BFF;
+  background-color: #808080; /* Changed to gray */
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  font-family: 'Nunito', Arial, sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #696969;
+}
+
 }
