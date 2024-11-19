@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Product from '../components/Product';
 import sneakers from '../assets/sneakers.jpg';
 import jacket from '../assets/jacket.jpg';
 import watch from '../assets/watch.jpg';
+import defaultImage from '../assets/placeholder.jpg';
 import './LandingPage.css';
 
-const products = [
-  { id: 1, name: 'Sneakers', price: 59.99, image: sneakers },
-  { id: 2, name: 'Jacket', price: 89.99, image: jacket },
-  { id: 3, name: 'Watch', price: 120.00, image: watch },
-];
-
+const productImageMap = {
+  Sneakers: sneakers,
+  Jacket: jacket,
+  Watch: watch,
+};
 
 const LandingPage = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('http://localhost:8081/onlineShopping/public/product/all')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const updatedProducts = data.content.map((product) => ({
+          ...product,
+          image: productImageMap[product.name] || defaultImage, // Assign image based on name
+        }));
+        setProducts(updatedProducts);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading products...</p>;
+  }
+
   return (
     <div>
-      <Navbar />
       <header className="hero">
         <h2>Welcome to Shop Mate</h2>
         <p>Your one-stop shop for everything!</p>
