@@ -4,7 +4,7 @@ import Product from '../components/Product';
 import sneakers from '../assets/sneakers.jpg';
 import jacket from '../assets/jacket.jpg';
 import watch from '../assets/watch.jpg';
-import defaultImage from '../assets/placeholder.jpg';
+import defaultImage from '../assets/placeholder.png';
 import './LandingPage.css';
 
 const productImageMap = {
