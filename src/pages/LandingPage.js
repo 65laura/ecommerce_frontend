@@ -4,7 +4,6 @@ import Product from '../components/Product';
 import sneakers from '../assets/sneakers.jpg';
 import jacket from '../assets/jacket.jpg';
 import watch from '../assets/watch.jpg';
-import defaultImage from '../assets/placeholder.png';
 import './LandingPage.css';
 
 const productImageMap = {
@@ -20,10 +19,10 @@ const LandingPage = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:8081/onlineShopping/public/product/all?page=${currentPage}&size=10`)
+    fetch("http://localhost:8081/onlineShopping/public/product/all?page=${currentPage}&size=10")
       .then((response) => response.json()) // Parse the JSON response
       .then((data) => {
-        const { content, totalPages } = data; // Destructure data
+        const { content, totalPages } = data;
         setProducts(content);
         setTotalPages(totalPages);
         setLoading(false);
@@ -32,7 +31,7 @@ const LandingPage = () => {
         console.error('Error fetching products:', error);
         setLoading(false);
       });
-  }, [currentPage]); // Fetch products whenever currentPage changes
+  }, [currentPage]);
 
   const handleNextPage = () => {
     if (currentPage < totalPages - 1) {

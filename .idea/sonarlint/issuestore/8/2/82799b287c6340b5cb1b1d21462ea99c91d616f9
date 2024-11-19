@@ -1,7 +1,9 @@
 
-Kjavascript:S6774"('product' is missing in props validation(°ë8ë§âÏ²2
-Vjavascript:S6774".'product.image' is missing in props validation(¯¼§¬úÿÿÿÿ8ì§âÏ²2
-Ujavascript:S6774"-'product.name' is missing in props validation(¯¼§¬úÿÿÿÿ8ì§âÏ²2
-Ojavascript:S6774	"-'product.name' is missing in props validation(Æó8í§âÏ²2
-Vjavascript:S6774
-".'product.price' is missing in props validation(õş¦ñşÿÿÿÿ8í§âÏ²2
+Kjavascript:S6774"('product' is missing in props validation(°ë8üâ´2
+Wjavascript:S6774"4'product.productName' is missing in props validation(¦Ï¿ÿ8ıâ´2
+Vjavascript:S6774	"4'product.productName' is missing in props validation(ø¢•8ıâ´2
+`javascript:S6774
+"8'product.productCategory' is missing in props validation(Ø–Ï¾şÿÿÿÿ8ıâ´2
+Wjavascript:S6774"4'product.description' is missing in props validation(É­±¶8ıâ´2
+Qjavascript:S6774".'product.price' is missing in props validation(³®îı8şâ´2
+Yjavascript:S6774"6'product.price.toFixed' is missing in props validation(³®îı8şâ´2

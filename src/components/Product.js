@@ -1,13 +1,15 @@
-
 import React from 'react';
 import './Product.css';
+import placeholderImage from '../assets/placeholder.png';
 
 const ProductCard = ({ product }) => {
   return (
     <div className="product">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <p>${product.price}</p>
+      <img src={placeholderImage} alt={product.productName} />
+      <h3>{product.productName}</h3>
+      <p>Category: {product.productCategory}</p>
+      <p>{product.description}</p>
+      <p>${product.price.toFixed(2)}</p>
     </div>
   );
 };
