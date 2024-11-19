@@ -16,28 +16,35 @@ const productImageMap = {
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:8081/onlineShopping/public/product/all')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch products');
-        }
-        return response.json();
-      })
+    fetch(`http://localhost:8081/onlineShopping/public/product/all?page=${currentPage}&size=10`)
+      .then((response) => response.json()) // Parse the JSON response
       .then((data) => {
-        const updatedProducts = data.content.map((product) => ({
-          ...product,
-          image: productImageMap[product.name] || defaultImage, // Assign image based on name
-        }));
-        setProducts(updatedProducts);
+        const { content, totalPages } = data; // Destructure data
+        setProducts(content);
+        setTotalPages(totalPages);
         setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching products:', error);
         setLoading(false);
       });
-  }, []);
+  }, [currentPage]); // Fetch products whenever currentPage changes
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages - 1) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -45,6 +52,7 @@ const LandingPage = () => {
 
   return (
     <div>
+    <Navbar />
       <header className="hero">
         <h2>Welcome to Shop Mate</h2>
         <p>Your one-stop shop for everything!</p>
@@ -54,6 +62,19 @@ const LandingPage = () => {
           <Product key={product.id} product={product} />
         ))}
       </section>
+      <div className="pagination">
+        <button onClick={handlePreviousPage} disabled={currentPage === 0}>
+          Previous
+        </button>
+        <span>
+          Page {currentPage + 1} of {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages - 1}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
