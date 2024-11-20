@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Product from '../components/Product';
-import leatherBoots from '../assets/leatherBoots.png';
-import ergonomicOfficeChair from '../assets/ergonomicOfficeChair.png';
-import petChewToy from '../assets/petChewToy.png';
-import yogaMat from '../assets/yogaMat.png';
 import './LandingPage.css';
-
-const productImageMap = {
-  LeatherBoots: leatherBoots ,
-  ErgonomicOfficeChair: ergonomicOfficeChair,
-  PetChewToy :petChewToy
-  YogaMat.png :yogaMat
-
-
-};
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
