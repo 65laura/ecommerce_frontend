@@ -19,8 +19,15 @@ const LandingPage = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:8081/onlineShopping/public/product/all?page=${currentPage}&size=10")
-      .then((response) => response.json()) // Parse the JSON response
+    fetch('http://localhost:8081/onlineShopping/public/product/all', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'pageNumber': currentPage,
+        'pageSize': 10,
+      },
+    })
+      .then((response) => response.json())
       .then((data) => {
         const { content, totalPages } = data;
         setProducts(content);
@@ -51,7 +58,7 @@ const LandingPage = () => {
 
   return (
     <div>
-    <Navbar />
+      <Navbar />
       <header className="hero">
         <h2>Welcome to Shop Mate</h2>
         <p>Your one-stop shop for everything!</p>
