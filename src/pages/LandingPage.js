@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Product from '../components/Product';
-import sneakers from '../assets/sneakers.jpg';
-import jacket from '../assets/jacket.jpg';
+import leatherBoots from '../assets/leatherBoots.png';
+import ergonomicOfficeChair from '../assets/ergonomicOfficeChair.png';
 import watch from '../assets/watch.jpg';
 import './LandingPage.css';
 
 const productImageMap = {
-  Sneakers: sneakers,
-  Jacket: jacket,
+  LeatherBoots: leatherBoots ,
+  ErgonomicOfficeChair: ergonomicOfficeChair,
   Watch: watch,
 };
 
@@ -25,7 +25,7 @@ const LandingPage = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);  // Directly setting the list of products
+        setProducts(data);
         setLoading(false);
       })
       .catch((error) => {
