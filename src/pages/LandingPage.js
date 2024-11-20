@@ -15,42 +15,24 @@ const productImageMap = {
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     fetch('http://localhost:8081/onlineShopping/public/product/all', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'pageNumber': currentPage,
-        'pageSize': 10,
       },
     })
       .then((response) => response.json())
       .then((data) => {
-        const { content, totalPages } = data;
-        setProducts(content);
-        setTotalPages(totalPages);
+        setProducts(data);  // Directly setting the list of products
         setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching products:', error);
         setLoading(false);
       });
-  }, [currentPage]);
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const handlePreviousPage = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
+  }, []);
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -68,19 +50,6 @@ const LandingPage = () => {
           <Product key={product.id} product={product} />
         ))}
       </section>
-      <div className="pagination">
-        <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-          Previous
-        </button>
-        <span>
-          Page {currentPage + 1} of {totalPages}
-        </span>
-        <button
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages - 1}>
-          Next
-        </button>
-      </div>
     </div>
   );
 };
