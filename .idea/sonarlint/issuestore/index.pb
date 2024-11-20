@@ -61,3 +61,7 @@ I
 src/pages/ContactPage.css,3\6\362e5178167053e6d24258ae3e7d1d585b244052
 A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+H
+src/pages/ProductPage.js,8\5\858c5f481cd2dd12ac6d1aa72002e134639cab80
+I
+src/pages/ProductPage.css,2\b\2bd0061f0aab5e249fffa60343556462e718ac10
