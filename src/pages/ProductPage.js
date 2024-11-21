@@ -10,7 +10,8 @@ const ProductPage = () => {
     description: '',
     price: '',
   });
-  const [editProductId, setEditProductId] = useState(null); // For updates
+  const [editProductId, setEditProductId] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:8081/onlineShopping/public/product/all?page=0&size=10')
@@ -40,6 +41,7 @@ const ProductPage = () => {
       .then((newProduct) => {
         setProducts((prev) => [...prev, newProduct]);
         setFormData({ productName: '', productCategory: '', description: '', price: '' });
+        setShowForm(false); // Hide the form after creating the product
       })
       .catch((error) => console.error(error));
   };
@@ -63,6 +65,7 @@ const ProductPage = () => {
         );
         setEditProductId(null);
         setFormData({ productName: '', productCategory: '', description: '', price: '' });
+        setShowForm(false);
       })
       .catch((error) => console.error(error));
   };
@@ -75,45 +78,59 @@ const ProductPage = () => {
       description: product.description,
       price: product.price,
     });
+    setShowForm(true); // Show the form when editing
   };
 
   return (
     <div className="product-page">
       <h1>Manage Products</h1>
-
-      <div className="form">
-        <h2>{editProductId ? 'Update Product' : 'Create Product'}</h2>
-        <input
-          type="text"
-          name="productName"
-          placeholder="Product Name"
-          value={formData.productName}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="productCategory"
-          placeholder="Category"
-          value={formData.productCategory}
-          onChange={handleChange}
-        />
-        <textarea
-          name="description"
-          placeholder="Description"
-          value={formData.description}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="price"
-          placeholder="Price"
-          value={formData.price}
-          onChange={handleChange}
-        />
-        <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
-          {editProductId ? 'Update Product' : 'Create Product'}
+      {!showForm && (
+        <button
+          onClick={() => setShowForm(true)}
+          className="create-product-button"
+        >
+          Create Product
         </button>
-      </div>
+      )}
+
+      {showForm && (
+        <div className="form">
+          <h2>{editProductId ? 'Update Product' : 'Create Product'}</h2>
+          <input
+            type="text"
+            name="productName"
+            placeholder="Product Name"
+            value={formData.productName}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="productCategory"
+            placeholder="Category"
+            value={formData.productCategory}
+            onChange={handleChange}
+          />
+          <textarea
+            name="description"
+            placeholder="Description"
+            value={formData.description}
+            onChange={handleChange}
+          />
+          <input
+            type="number"
+            name="price"
+            placeholder="Price"
+            value={formData.price}
+            onChange={handleChange}
+          />
+          <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
+            {editProductId ? 'Update Product' : 'Create Product'}
+          </button>
+          <button onClick={() => setShowForm(false)} className="cancel-button">
+            Cancel
+          </button>
+        </div>
+      )}
 
       <h2>Products List</h2>
       {loading ? (
