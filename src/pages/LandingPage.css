@@ -1,30 +1,36 @@
+/* Landing Page Styles */
 body {
-  background-color: #f4f4f4;
   margin: 0;
   font-family: 'Nunito', Arial, sans-serif;
 }
 
-.hero {
+.landing-page-container {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.landing-page-container .hero {
   background: linear-gradient(to bottom, #4b0082, #e6e6e6);
   text-align: center;
   padding: 40px 20px;
   color: white;
 }
 
-.hero h1 {
+.landing-page-container .hero h1 {
   background: linear-gradient(to right, #ff8c00, #4b0082);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2.5rem;
 }
 
-.hero p {
+.landing-page-container .hero p {
   color: #dcdcdc;
   font-size: 1.2rem;
 }
 
 /* Products Section */
-.products {
+.landing-page-container .products {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -32,7 +38,8 @@ body {
   background-color: #f9f9ff;
 }
 
-.product-card {
+/* Product Card Styles */
+.landing-page-container .product-card {
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -41,35 +48,37 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
+.landing-page-container .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.product-card img {
+.landing-page-container .product-card img {
   border-radius: 6px;
   max-width: 100%;
   height: auto;
 }
 
-.product-card h2 {
+.landing-page-container .product-card h2 {
   color: #4b0082;
   font-size: 1.2rem;
   margin-top: 10px;
 }
 
-.product-card p {
+.landing-page-container .product-card p {
   color: #666;
   font-size: 1rem;
   margin: 5px 0 0 0;
 }
-.pagination {
+
+/* Pagination Controls */
+.landing-page-container .pagination {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.pagination button {
+.landing-page-container .pagination button {
   margin: 0 10px;
   padding: 5px 10px;
   cursor: pointer;
@@ -80,13 +89,14 @@ body {
   transition: background-color 0.3s;
 }
 
-.pagination button:disabled {
+.landing-page-container .pagination button:disabled {
   cursor: not-allowed;
   background-color: #cccccc;
 }
 
-.pagination span {
+.landing-page-container .pagination span {
   display: inline-block;
   margin: 0 10px;
   line-height: 2;
 }
+

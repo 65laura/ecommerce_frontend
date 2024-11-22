@@ -30,7 +30,7 @@ const LandingPage = () => {
   }
 
   return (
-    <div>
+    <div className="landing-page-container">
       <Navbar />
       <header className="hero">
         <h2>Welcome to Shop Mate</h2>
