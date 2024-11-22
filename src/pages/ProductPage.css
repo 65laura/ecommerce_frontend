@@ -1,54 +1,90 @@
+
 body {
   font-family: 'Nunito', Arial, sans-serif;
-  background: #fff;
+  background-color: #f4f4f4;
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 h1, h2 {
-  color: black;
+  color: #2c2c2c;
   text-align: center;
+  margin-bottom: 16px;
 }
+
 
 .product-page {
   max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
 }
+
 
 .form {
   background-color: #f9f3ff;
-  padding: 16px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
 }
+
 
 .form input,
 .form textarea {
-  width: calc(100% - 20px);
-  padding: 12px;
-  margin: 10px 0;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
   border: 1px solid #9c27b0;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #6a1b9a;
+  box-shadow: 0 0 6px rgba(108, 27, 154, 0.3);
+  outline: none;
 }
 
 .form button {
-  width: 48%;
+  width: calc(50% - 8px);
   padding: 12px;
   background-color: #6a1b9a;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  margin: 0 2%;
+  margin: 0 4px;
   font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .form button:hover {
   background-color: #9c27b0;
+  transform: scale(1.05);
 }
+
+.form button:active {
+  background-color: #53117c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-page {
+    margin: 20px;
+    padding: 16px;
+  }
+
+  .form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
