@@ -41,7 +41,7 @@ const ProductPage = () => {
       .then((newProduct) => {
         setProducts((prev) => [...prev, newProduct]);
         setFormData({ productName: '', productCategory: '', description: '', price: '' });
-        setShowForm(false); // Hide the form after creating the product
+        setShowForm(false);
       })
       .catch((error) => console.error(error));
   };
@@ -51,7 +51,7 @@ const ProductPage = () => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        productId: editProductId, // Pass productId as a header
+        productId: editProductId,
       },
       body: JSON.stringify(formData),
     })
@@ -78,7 +78,7 @@ const ProductPage = () => {
       description: product.description,
       price: product.price,
     });
-    setShowForm(true); // Show the form when editing
+    setShowForm(true);
   };
 
   return (
@@ -123,18 +123,20 @@ const ProductPage = () => {
             value={formData.price}
             onChange={handleChange}
           />
-          <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
-            {editProductId ? 'Update Product' : 'Create Product'}
-          </button>
-          <button onClick={() => setShowForm(false)} className="cancel-button">
-            Cancel
-          </button>
+          <div className="form-buttons">
+            <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
+              {editProductId ? 'Update Product' : 'Create Product'}
+            </button>
+            <button onClick={() => setShowForm(false)} className="cancel-button">
+              Cancel
+            </button>
+          </div>
         </div>
       )}
 
       <h2>Products List</h2>
       {loading ? (
-        <p>Loading products...</p>
+        <div className="spinner"></div>
       ) : (
         <div className="product-list">
           {products.map((product) => (
