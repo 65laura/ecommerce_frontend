@@ -65,8 +65,23 @@ h1, h2 {
 }
 
 .cancel-button {
-  background-color: #f44336;
-  color: white;
+  background-color: #d1c4e9;
+  color: #6a1b9a;
+  border: 1px solid #9c27b0;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #b39ddb;
+  transform: scale(1.05);
+}
+
+.cancel-button:active {
+  background-color: #7e57c2;
 }
 
 .product-list {
