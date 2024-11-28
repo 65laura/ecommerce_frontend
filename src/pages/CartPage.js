@@ -18,10 +18,10 @@ const CartPage = ({ cartItems = [], onRemove }) => {
                 <h3>{item.name}</h3>
                 <p>Price: ${item.price}</p>
                 <p>Quantity: {item.quantity}</p>
-                <button onClick={() => onRemove(item.id)} className="cart-remove-button">
-                  Remove
-                </button>
               </div>
+              <button onClick={() => onRemove(item.id)} className="cart-remove-button">
+                Remove
+              </button>
             </div>
           ))}
           <h3 className="cart-total">Total: ${getTotal().toFixed(2)}</h3>
