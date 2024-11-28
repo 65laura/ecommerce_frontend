@@ -2,7 +2,7 @@
 import React from "react";
 import "./CartPage.css";
 
-const CartPage = ({ cartItems, onRemove }) => {
+const CartPage = ({ cartItems = [], onRemove }) => {
   const getTotal = () =>
     cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
