@@ -65,3 +65,5 @@ H
 src/pages/ProductPage.js,8\5\858c5f481cd2dd12ac6d1aa72002e134639cab80
 I
 src/pages/ProductPage.css,2\b\2bd0061f0aab5e249fffa60343556462e718ac10
+E
+src/pages/CartPage.js,f\5\f59acc4c2268dce97e2646ff8775d09ae3aaccdd
