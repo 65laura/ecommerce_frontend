@@ -67,3 +67,5 @@ I
 src/pages/ProductPage.css,2\b\2bd0061f0aab5e249fffa60343556462e718ac10
 E
 src/pages/CartPage.js,f\5\f59acc4c2268dce97e2646ff8775d09ae3aaccdd
+F
+src/pages/CartPage.css,7\b\7bdf7ba5183dc58c4c49cd81a8d23a2946c967f3
