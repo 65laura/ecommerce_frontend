@@ -14,10 +14,10 @@ h1, h2 {
 }
 
 .product-page {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 50px auto;
   padding: 24px;
-  background-color: #fff;
+  background-color: #e6e6e6;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border: 1px solid #e0e0e0;
@@ -55,10 +55,10 @@ h1, h2 {
 .form input,
 .form textarea {
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   margin-bottom: 16px;
   border: 1px solid #9c27b0;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 16px;
 }
 
