@@ -5,9 +5,9 @@ const ContactPage = () => {
   return (
     <div className="contact-container">
       <h1 className="contact-title">Contact Us</h1>
-      <p className="contact-description">
+      <p className="contact-description"> <b>
         We'd love to hear from you! Please reach out to us using the details below:
-      </p>
+      </b></p>
       <div className="contact-details">
         <p><strong>Email:</strong> lauracelyn1@gmail.com</p>
         <p><strong>Phone:</strong> +250791363991</p>
