@@ -13,6 +13,7 @@ const ContactPage = () => {
         <p><strong>Phone:</strong> +250791363991</p>
         <p><strong>Address:</strong> KN 185 st</p>
       </div>
+        <p className="request-note"><em>For any request, share it on t</em></p>
       <form className="contact-form">
         <label htmlFor="name">Your Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" />
