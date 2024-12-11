@@ -1,4 +1,4 @@
-/* Landing Page Styles */
+
 body {
   margin: 0;
   font-family: 'Nunito', Arial, sans-serif;
@@ -33,6 +33,7 @@ body {
 .landing-page-container .products {
   display: flex;
   gap: 2rem;
+  flex-wrap:wrap;
   justify-content: center;
   padding: 2rem;
   background-color: #f9f9ff;
@@ -40,63 +41,54 @@ body {
 
 /* Product Card Styles */
 .landing-page-container .product-card {
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px; /* Set a consistent card width */
 }
 
 .landing-page-container .product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .landing-page-container .product-card img {
-  border-radius: 6px;
+  border-radius: 8px;
   max-width: 100%;
   height: auto;
+  margin-bottom: 15px;
 }
 
 .landing-page-container .product-card h2 {
   color: #4b0082;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.landing-page-container .product-card .category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.landing-page-container .product-card .description {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.landing-page-container .product-card .price {
+  color: #ff8c00;
   font-size: 1.2rem;
+  font-weight: bold;
   margin-top: 10px;
 }
 
-.landing-page-container .product-card p {
-  color: #666;
-  font-size: 1rem;
-  margin: 5px 0 0 0;
-}
-
-/* Pagination Controls */
-.landing-page-container .pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.landing-page-container .pagination button {
-  margin: 0 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  border: 1px solid #4b0082;
-  background-color: #4b0082;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.landing-page-container .pagination button:disabled {
-  cursor: not-allowed;
-  background-color: #cccccc;
-}
-
-.landing-page-container .pagination span {
-  display: inline-block;
-  margin: 0 10px;
-  line-height: 2;
-}
 
