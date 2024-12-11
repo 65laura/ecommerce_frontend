@@ -13,15 +13,23 @@ const ProductPage = () => {
   const [editProductId, setEditProductId] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  useEffect(() => {
-    fetch('http://localhost:8081/onlineShopping/public/product/all?page=0&size=10')
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.content || []);
-        setLoading(false);
+    useEffect(() => {
+      fetch('http://localhost:8081/onlineShopping/public/product/all', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
-      .catch((error) => console.error('Error fetching products:', error));
-  }, []);
+        .then((response) => response.json())
+        .then((data) => {
+          setProducts(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error fetching products:', error);
+          setLoading(false);
+        });
+    }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,7 +55,7 @@ const ProductPage = () => {
   };
 
   const handleUpdateProduct = () => {
-    fetch(`http://localhost:8081/onlineShopping/public/product/update`, {
+    fetch('http://localhost:8081/onlineShopping/public/product/update', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
