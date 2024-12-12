@@ -1,7 +1,16 @@
-
+/* General Styles */
 body {
   margin: 0;
   font-family: 'Nunito', Arial, sans-serif;
+}
+
+:root {
+  --gap: 2rem;
+  --padding: 20px;
+  --border-radius: 10px;
+  --primary-color: #4b0082;
+  --secondary-color: #ff8c00;
+  --background-color: #f9f9ff;
 }
 
 .landing-page-container {
@@ -11,14 +20,14 @@ body {
 
 /* Hero Section */
 .landing-page-container .hero {
-  background: linear-gradient(to bottom, #4b0082, #e6e6e6);
+  background: linear-gradient(to bottom, var(--primary-color), #d3d3d3);
   text-align: center;
   padding: 40px 20px;
   color: white;
 }
 
 .landing-page-container .hero h1 {
-  background: linear-gradient(to right, #ff8c00, #4b0082);
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2.5rem;
@@ -29,25 +38,35 @@ body {
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .landing-page-container .hero h1 {
+    font-size: 2rem;
+  }
+}
+
 /* Products Section */
 .landing-page-container .products {
   display: flex;
-  gap: 2rem;
-  flex-wrap:wrap;
+  gap: var(--gap);
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
-  background-color: #f9f9ff;
+  padding: var(--gap);
+  background-color: var(--background-color);
 }
 
 /* Product Card Styles */
 .landing-page-container .product-card {
   background: #ffffff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px; /* Set a consistent card width */
+  max-width: 300px;
+  flex: 1 1 calc(250px + 1rem);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 .landing-page-container .product-card:hover {
@@ -60,10 +79,15 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.landing-page-container .product-card img:hover {
+  transform: scale(1.05);
 }
 
 .landing-page-container .product-card h2 {
-  color: #4b0082;
+  color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 10px 0;
@@ -85,10 +109,27 @@ body {
 }
 
 .landing-page-container .product-card .price {
-  color: #ff8c00;
+  color: var(--secondary-color);
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 10px;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-page-container .products {
+    padding: 1rem;
+  }
+
+  .landing-page-container .product-card {
+    padding: 15px;
+  }
+}
