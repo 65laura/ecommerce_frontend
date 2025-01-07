@@ -50,7 +50,7 @@ h1, h2 {
 
 /* Form Styling */
 .form {
-  background-color: #E7DBEF ;
+  background-color: #e6e6e6;
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -83,7 +83,7 @@ h1, h2 {
 }
 
 .cancel-button {
-  background-color: #E7DBEF;
+  background-color: #e6e6e6;
   color: #4b0082;
   border: 1px solid #4b0082;
   padding: 12px 20px;
@@ -103,7 +103,7 @@ h1, h2 {
 }
 
 .create-button {
-  background-color: #E7DBEF;
+  background-color: #e6e6e6;
   color: #4b0082;
   border: 1px solid #4b0082;
   padding: 12px 20px;
