@@ -110,6 +110,7 @@ const ProductPage = () => {
             placeholder="Product Name"
             value={formData.productName}
             onChange={handleChange}
+            required
           />
           <input
             type="text"
@@ -117,12 +118,14 @@ const ProductPage = () => {
             placeholder="Category"
             value={formData.productCategory}
             onChange={handleChange}
+            required
           />
           <textarea
             name="description"
             placeholder="Description"
             value={formData.description}
             onChange={handleChange}
+            required
           />
           <input
             type="number"
@@ -130,6 +133,7 @@ const ProductPage = () => {
             placeholder="Price"
             value={formData.price}
             onChange={handleChange}
+            required
           />
           <div className="form-buttons">
             <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
