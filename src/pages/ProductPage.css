@@ -102,6 +102,26 @@ h1, h2 {
   background-color: #9575cd;
 }
 
+.create-button {
+  background-color: #E7DBEF;
+  color: #4b0082;
+  border: 1px solid #4b0082;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: #d1c4e9;
+  transform: translateY(-2px);
+}
+
+.create-button:active {
+  background-color: #9575cd;
+}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

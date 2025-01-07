@@ -144,7 +144,7 @@ const ProductPage = () => {
             onInput={(e) => e.target.setCustomValidity('')}
           />
           <div className="form-buttons">
-            <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
+            <button class="create-button" Create onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
               {editProductId ? 'Update Product' : 'Create Product'}
             </button>
             <button onClick={() => setShowForm(false)} className="cancel-button">

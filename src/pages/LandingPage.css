@@ -75,11 +75,11 @@ body {
 }
 
 .landing-page-container .product-card img {
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
 }
 
 .landing-page-container .product-card img:hover {
