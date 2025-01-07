@@ -111,6 +111,8 @@ const ProductPage = () => {
             value={formData.productName}
             onChange={handleChange}
             required
+            onInvalid={(e) => e.target.setCustomValidity('Product Name is required')}
+            onInput={(e) => e.target.setCustomValidity('')}
           />
           <input
             type="text"
@@ -119,6 +121,8 @@ const ProductPage = () => {
             value={formData.productCategory}
             onChange={handleChange}
             required
+            onInvalid={(e) => e.target.setCustomValidity('Category is required')}
+            onInput={(e) => e.target.setCustomValidity('')}
           />
           <textarea
             name="description"
@@ -126,6 +130,8 @@ const ProductPage = () => {
             value={formData.description}
             onChange={handleChange}
             required
+              onInvalid={(e) => e.target.setCustomValidity('description cannot be empty')}
+               onInput={(e) => e.target.setCustomValidity('')}
           />
           <input
             type="number"
@@ -134,6 +140,8 @@ const ProductPage = () => {
             value={formData.price}
             onChange={handleChange}
             required
+            onInvalid={(e) => e.target.setCustomValidity('Price cannot be empty')}
+            onInput={(e) => e.target.setCustomValidity('')}
           />
           <div className="form-buttons">
             <button onClick={editProductId ? handleUpdateProduct : handleCreateProduct}>
