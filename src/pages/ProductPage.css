@@ -14,8 +14,6 @@ h1, h2 {
   margin-bottom: 20px;
   font-weight: 600;
 }
-
-/* Product Page Container */
 .product-page {
   max-width: 1100px;
   margin: 40px auto;
@@ -25,8 +23,6 @@ h1, h2 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
 }
-
-/* Create Product Button */
 .create-product-button {
   background-color: #4b0082;
   color: white;
@@ -47,8 +43,6 @@ h1, h2 {
 .create-product-button:active {
   background-color: #3a005e;
 }
-
-/* Form Styling */
 .form {
   background-color: #e6e6e6;
   padding: 20px;
@@ -75,7 +69,6 @@ h1, h2 {
   box-shadow: 0 0 4px rgba(106, 27, 154, 0.5);
 }
 
-/* Form Buttons */
 .form-buttons {
   display: flex;
   justify-content: flex-end;

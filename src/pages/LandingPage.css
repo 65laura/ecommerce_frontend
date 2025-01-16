@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   margin: 0;
   font-family: 'Nunito', Arial, sans-serif;
@@ -18,7 +18,6 @@ body {
   min-height: 100vh;
 }
 
-/* Hero Section */
 .landing-page-container .hero {
   background: linear-gradient(to bottom, var(--primary-color), #d3d3d3);
   text-align: center;
@@ -44,7 +43,6 @@ body {
   }
 }
 
-/* Products Section */
 .landing-page-container .products {
   display: flex;
   gap: var(--gap);
@@ -54,7 +52,6 @@ body {
   background-color: var(--background-color);
 }
 
-/* Product Card Styles */
 .landing-page-container .product-card {
   background: #ffffff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -117,7 +114,6 @@ body {
   margin-top: 10px;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -125,7 +121,6 @@ body {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .landing-page-container .products {
     padding: 1rem;
