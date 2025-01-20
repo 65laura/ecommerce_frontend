@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-         <img src={logo} alt="ShopMate Logo" className="navbar-logo-img" />
+        <img src={logo} alt="ShopMate Logo" className="navbar-logo-img" />
         <Link to="/" className="navbar-title">ShopMate</Link>
       </div>
       <ul className="navbar-links">
@@ -26,9 +32,14 @@ const Navbar = () => {
         <li>
           <Link to="/profile">Profile</Link>
         </li>
+        <li>
+          <button className="darkMode" onClick={toggleDarkMode}>
+            {darkMode ? 'Light' : 'Dark'} Mode
+          </button>
+        </li>
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;

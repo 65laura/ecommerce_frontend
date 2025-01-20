@@ -11,24 +11,13 @@ function App() {
     { id: 2, name: "Item 2", price: 15, quantity: 1, image: "item2.png" },
   ]);
 
-  const [darkMode,setDarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-      setDarkMode((prevMode) => !prevMode);
-    };
-
   const removeItem = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
   return (
     <Router>
-        <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-              <header>
-                <button onClick={toggleDarkMode}>
-                   {darkMode ? 'Light' : 'Dark'} Mode
-                </button>
-              </header>
+       <div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactPage />} />

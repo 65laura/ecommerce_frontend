@@ -45,5 +45,35 @@
 }
 
 .navbar-links a:hover {
-  color: #00bcd4;
+  color: #00bcd4;}
+
+  button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  button:hover {
+    background-color: #9b4d96;
+    transform: scale(1.05);
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #9b4d96;
+  }
+
+  .dark-mode button {
+    background-color: #333;
+    color: #e6e6e6;
+  }
+
+  .dark-mode button:hover {
+    background-color: #666;
 }
