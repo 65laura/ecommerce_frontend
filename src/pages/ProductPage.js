@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Footer from '../components/Footer';
 import './ProductPage.css';
 
 const ProductPage = () => {
@@ -170,6 +171,7 @@ const ProductPage = () => {
           ))}
         </div>
       )}
+      <Footer/>
     </div>
   );
 };

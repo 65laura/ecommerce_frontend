@@ -1,5 +1,6 @@
 
 import React from "react";
+import Footer from '../components/Footer';
 import "./CartPage.css";
 
 const CartPage = ({ cartItems = [], onRemove }) => {
@@ -29,6 +30,7 @@ const CartPage = ({ cartItems = [], onRemove }) => {
       ) : (
         <p className="cart-empty-message">Your cart is empty!</p>
       )}
+      <Footer/>
     </div>
   );
 };

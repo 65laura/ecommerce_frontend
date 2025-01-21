@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import './ContactPage.css';
 
 const ContactPage = () => {
@@ -26,6 +27,7 @@ const ContactPage = () => {
 
         <button type="submit" className="submit-button">Send Message</button>
       </form>
+      <Footer/>
     </div>
   );
 };
