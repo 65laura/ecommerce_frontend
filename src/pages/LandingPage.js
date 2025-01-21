@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Product from '../components/Product';
+import Footer from '../components/Footer';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -41,6 +42,7 @@ const LandingPage = () => {
           <Product key={product.id} product={product} />
         ))}
       </section>
+      <Footer/>
     </div>
   );
 };

@@ -69,3 +69,11 @@ E
 src/pages/CartPage.js,f\5\f59acc4c2268dce97e2646ff8775d09ae3aaccdd
 F
 src/pages/CartPage.css,7\b\7bdf7ba5183dc58c4c49cd81a8d23a2946c967f3
+Å
+Q.idea/sonarlint/securityhotspotstore/1/c/1ce5e63ae1582ed0b425c46001299a07515efbf9,9\4\948dd6b2f1f71b1cee0953b5060c2844698b9650
+H
+src/components/footer.js,f\9\f9a8f3e280b0ce0713ebe20bd2dd93c5ad53cd11
+I
+src/components/Footer.css,7\1\717e22cb2952aa535041cf51968946ed70cb94c6
+H
+src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
