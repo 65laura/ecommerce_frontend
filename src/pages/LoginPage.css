@@ -18,30 +18,45 @@ body {
   background-color: #f5f7fa;
 }
 
-.login-box {
-  background-color: white;
-  padding: 40px;
+.login-card {
+  display: flex;
+  flex-direction: row;
+  background-color: purple;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  max-width: 600px;
   width: 100%;
-  max-width: 400px;
+  overflow: hidden;
 }
 
-.logo {
-  width: 100px;
-  margin-bottom: 20px;
+.login-logo {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo img {
+  width: 30px;
+  height: auto;
+}
+
+.login-form {
+  padding: 40px;
+  text-align: left;
+  flex-grow: 1;
 }
 
 h1 {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .input-group {
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .input-group label {
@@ -56,10 +71,11 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  align: center;
 }
 
 .btn {
-  background-color: #007bff;
+  background-color: #6a0dad;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -70,20 +86,21 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #5a0bb5;
 }
 
 .links {
   margin-top: 20px;
+  text-align: center;
 }
 
 .links a {
-  color: #007bff;
+  color: #6a0dad;
   text-decoration: none;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .links p {
