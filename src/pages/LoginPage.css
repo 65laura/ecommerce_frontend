@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Nunito',Arial, sans-serif;
   background-color: #f5f7fa;
   display: flex;
   justify-content: center;
@@ -31,19 +31,19 @@ body {
 
 .login-logo {
   background-color: #f0f0f0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: right;
+  justify-content: right;
 }
 
 .login-logo img {
-  width: 30px;
-  height: auto;
+  width: 5px;
+ height: 10px;
 }
 
 .login-form {
-  padding: 40px;
+  padding: 100px;
   text-align: left;
   flex-grow: 1;
 }
