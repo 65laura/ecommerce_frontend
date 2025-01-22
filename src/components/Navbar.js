@@ -30,7 +30,7 @@ function Navbar() {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/Login">Login</Link>
         </li>
         <li>
           <button className="darkMode" onClick={toggleDarkMode}>

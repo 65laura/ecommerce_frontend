@@ -77,3 +77,7 @@ I
 src/components/Footer.css,7\1\717e22cb2952aa535041cf51968946ed70cb94c6
 H
 src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
+F
+src/pages/LoginPage.js,a\b\ab306ac0a18d7e6aee2cccafeee52c9ef756e0d5
+G
+src/pages/LoginPage.css,6\b\6bf5cec272703394728ec176cd23f27aee1b6830

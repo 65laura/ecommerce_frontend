@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
+import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/cart" element={<CartPage cartItems={cartItems} onRemove={removeItem} />} />
+          <Route path="/login" element={<LoginPage/>} />
         </Routes>
       </div>
     </Router>
